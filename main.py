@@ -3,9 +3,6 @@ from cell import Cell
 import const
 
 
-
-
-
 def height_prct(percentage):
     return (const.HEIGHT / 100) * percentage
 
@@ -61,12 +58,6 @@ def main():
     Cell.randomize_mines()
     
     root.mainloop()
-
-
-
-
-
-
 
 
 

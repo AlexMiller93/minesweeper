@@ -66,9 +66,7 @@ class Cell:
         mined_cells = random.sample(Cell.all, const.MINES_COUNT)
         
         for mined_cell in mined_cells:
-            # mined_cell.create_btn_object.configure(bg='red')
             mined_cell.is_mine = True
-            # self.cell_btn_object.configure(bg='red')
     
     
     def left_click_actions(self, event):
@@ -164,27 +162,12 @@ class Cell:
         # a logic to interrupt the game
         
         self.cell_btn_object.configure(bg='red')
-        
-        # mined_cells = [cell for cell in all if cell.is_mine]
-        # for cell in Cell.all:
-        #     if cell.is_mine:
-        #         self.cell_btn_object.configure(bg='red')
         time.sleep(5)
-        res = messagebox.askquestion('Game over', 'Play again?')
-        if res=='yes':
-            #! play again
-            # pass
-            messagebox.showinfo('sample 1', 'Restart game')
-            # main.root.destroy()
-            # os.startfile("main.py")
-        else: 
-            sys.exit()
-        # messagebox.showinfo('Game over', 'You clicked on a mine!')
+        messagebox.showinfo('Game over', 'You clicked on a mine!')
+        sys.exit()
     
-    
-    
-    # ctypes.windll.user32.MessageBoxW(
-    # 0, 'You clicked on a mine!', 'Game Over', 0)
+
+
 
 # todo: update exit menu, add function to restart the game
-# todo: if loose game? show all mines red color
+# todo: if loose game show all mines red color
